@@ -56,25 +56,27 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               padding: EdgeInsets.all(5),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10), color: Colors.white),
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white,
+              ),
               child: Row(
                 children: [
                   SvgPicture.asset("images/Icons/Gift.svg"),
                   SizedBox(width: 10),
-                  Text("1118 point",
-                      style:
-                      TextStyle(fontSize: 12, color: Color(0xff2E2996))),
+                  Text(
+                    "1118 point",
+                    style: TextStyle(fontSize: 12, color: Color(0xff2E2996)),
+                  ),
                   SizedBox(width: 10),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
       body: Column(
         children: <Widget>[
           const CustomSearchBar(),
-
 
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -89,8 +91,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: 80,
                         child: Image.asset(category1[index1].image),
                       ),
-                      Text(category1[index1].name,
-                          style: TextStyle(fontWeight: FontWeight.bold))
+                      Text(
+                        category1[index1].name,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ],
                   ),
                 );
@@ -98,7 +102,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           SizedBox(height: 20),
-
 
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -114,8 +117,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Image.asset(category2[index].image),
                       ),
                       SizedBox(height: 3),
-                      Text(category2[index].name,
-                          style: TextStyle(fontWeight: FontWeight.bold))
+                      Text(
+                        category2[index].name,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ],
                   ),
                 );
@@ -136,7 +141,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => CoffeePointMenuScreen()),
+                            builder: (context) => CoffeePointMenuScreen(),
+                          ),
                         );
                       }
                     },
@@ -147,8 +153,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           height: 90,
                           child: Image.asset(category[index].image),
                         ),
-                        Text(category[index].name,
-                            style: TextStyle(fontWeight: FontWeight.bold))
+                        Text(
+                          category[index].name,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ],
                     ),
                   ),
@@ -165,16 +173,22 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Recommended for you",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        color: Color(0xFF4B1515))),
-                Text("see all",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17,
-                        color: Color(0xFF4B1515))),
+                Text(
+                  "Recommended for you",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: Color(0xFF4B1515),
+                  ),
+                ),
+                Text(
+                  "see all",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 17,
+                    color: Color(0xFF4B1515),
+                  ),
+                ),
               ],
             ),
           ),
@@ -182,8 +196,9 @@ class _HomeScreenState extends State<HomeScreen> {
           // -- Banner --
           CarouselSlider.builder(
             itemCount: items.length,
-            itemBuilder: (BuildContext context, int itemIndex, int _) =>
-                Image.asset(items[itemIndex]),
+            itemBuilder:
+                (BuildContext context, int itemIndex, int _) =>
+                    Image.asset(items[itemIndex]),
             options: CarouselOptions(
               height: 150,
               aspectRatio: 1,
@@ -209,7 +224,9 @@ class _HomeScreenState extends State<HomeScreen> {
               if (index == 1) {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CoffeePointMenuScreen()),
+                  MaterialPageRoute(
+                    builder: (context) => CoffeePointMenuScreen(),
+                  ),
                 );
               }
             },
@@ -222,7 +239,6 @@ class _HomeScreenState extends State<HomeScreen> {
               BottomNavigationBarItem(
                 icon: Icon(Icons.search, size: 23),
                 label: 'Search',
-
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.receipt_long_outlined, size: 23),
